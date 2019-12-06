@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	<title>RoboCtrler</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link type="text/css" rel="stylesheet" href="assets/css/styles.css" />
+
+ <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="RoboCtrler">
+  <meta name="apple-mobile-web-app-title" content="RoboCtrler">
+  <meta name="theme-color" content="#f7f7f7">
+  <meta name="msapplication-navbutton-color" content="#f7f7f7">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="msapplication-starturl" content="https://borak.se/roboCtrl/">
+
+  
+</head>
+
+<body>
+
+	<form class="login">
+		<span>What's your secret key?</span>
+		<input type="text" placeholder="Please enter your secret key!"/>
+		<input type="submit" value="➡" />
+	</form>
+
+	
+	<div id="mainContainer" class="reveal blurred">
+
+		<div class="topnav">
+			
+			<a href="#keyboardPage" id="keyboard" class="pull-right">Keyboard</a>
+			<a href="#mousePage" id="mouse" class="pull-right">Mouse</a>
+			
+		</div>
+	
+		<!-- Mouse Page -->
+		<div id="mousePage" class="page">
+		
+			<div class="content"></div>
+		
+			<div class="bottom">
+				<div id="leftClick" class="mouseBtn"></div>
+				<span class="wheelClick">
+					<div id="wheelClickUp" class="mouseBtn"></div>
+					<div id="wheelClickDown" class="mouseBtn"></div>
+				</span>
+				<div id="rightClick" class="mouseBtn"></div>
+			</div>
+		</div>
+		
+		
+		<!-- keyboard page -->
+		
+		<!-- Mouse Page -->
+		<div id="keyboardPage" class="page">
+		
+			<div class="content">
+				<div class="center">
+					<input id="keyboard" type="text">
+					
+					<p id="volume"></p>
+					<button id="volumeUp">up</button>
+					<button id="volumeDown">down</button>
+					<button id="volumeMute">toggle mute</button>
+					
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+
+
+	<script src="/jquery/dist/jquery.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+
+	<!-- Main JavaScript file -->
+	<script src="assets/js/script.js"></script>
+
+</body>
+</html>
