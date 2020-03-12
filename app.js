@@ -20,17 +20,17 @@
 
 const express = require('express');
 const app = express();
-const java = require('java');
+/*const java = require('java');
 const Robot = java.import('java.awt.Robot');
 const MouseInfo = java.import('java.awt.MouseInfo');
 const InputEvent = java.import('java.awt.event.InputEvent');
 const KeyEvent = java.import('java.awt.event.KeyEvent');
-const audio = require('win-audio').speaker;
+const audio = require('win-audio').speaker;*/
 
 
 
-const robot = new Robot();
-const port = process.env.PORT || 666;
+//const robot = new Robot();
+const port = process.env.PORT || 3001;
 const io = require('socket.io').listen(app.listen(port));
 
 
@@ -45,7 +45,7 @@ const appSettings = {
 app.use(express.static(__dirname + '/public'));
 app.use('/jquery', express.static(__dirname + '/node_modules/jquery'));
 
-
+/*
 // This is a secret key that prevents others from opening your presentation
 // and controlling it. Change it to something that only you know.
 // Initialize a new socket.io application
@@ -186,5 +186,5 @@ var presentation = io.on('connection', function (socket) {
 	});
 	
 });
-
+*/
 console.log('Your presentation is running on http://localhost:' + port);
